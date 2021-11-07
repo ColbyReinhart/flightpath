@@ -1,0 +1,44 @@
+<html>
+<header>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Add Node</title>
+</header>
+<body>
+    <button id="geolocation-button">Let me locate</button>
+    <input type="text" id="location-name" />
+    <input type="checkbox" id="is-destination" />
+    <button id="add-location">Add Location</button>
+    <h1 id="infoheader"></h1>
+    <script>
+        let geolocation_button = document.querySelector("#geolocation-button");
+        let location_name_input = document.querySelector("#location-name");
+        let is_destination_checkbox = document.querySelector("#is-destination");
+        let add_location_button = document.querySelector("#add-location");
+        let infoheader = document.querySelector("#infoheader");
+
+        let lat, lng;
+
+        geolocation_button.addEventListener("click", async (e) => {
+            console.log(is_destination_checkbox.checked);
+            navigator.geolocation.getCurrentPosition((position) => {
+                lat = position.coords.latitude;
+                lng = position.coords.longitude;
+                infoheader.innerHTML = `${lat}, ${lng}`
+            }, (error) => {
+                infoheader.innerHTML = `${error.code}: ${error.message}`
+            });
+        });
+
+        add_location_button.addEventListener("click", async () => {
+            res = await fetch("{{url_for('addnode')}}", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({"nodeName": location_name_input.value, "lat": lat, "lng": lng, "isLeaf": is_destination_checkbox.checked})
+            });
+            location_name_input.value = ""
+        });
+    </script>
+</body>
+<html>

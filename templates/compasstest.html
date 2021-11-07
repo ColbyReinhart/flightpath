@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Compass</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            overflow: hidden;
+        }
+
+        canvas {
+            outline: 1px solid cyan;
+            position: absolute;
+            width: 100vw;
+            height: 100vw;
+            z-index: 1;
+        }
+        
+        video {
+            outline: 3px solid red;
+            width: 100vw;
+            height: 100vw;
+            z-index: -1;
+        }
+    </style>
+    <script type="module" defer src="/static/js/compasstest.js"></script>
+</head>
+<body>
+    <video id="video" autoplay playsinline></video>
+    <canvas id="canvas" width="512" height="512"></canvas>
+    <button id="compass-button">Start Compass</button>
+    <h1 id="angle-header"></h1>
+	<h1 id="dest-angle-header"></h1>
+	<h1 id="location-angle-header"></h1>
+	<h1 id="alpha-header"></h1>
+	<h1 id="beta-header"></h1>
+	<h1 id="gamma-header"></h1>
+</body>
+</html>

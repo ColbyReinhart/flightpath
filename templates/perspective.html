@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Perspective</title>
+    <link rel="stylesheet" href="/static/css/perspective.css" type="text/css">
+    <script defer src="/static/js/perspective.js"></script>
+</head>
+<body>
+	<video id="video" autoplay playsinline>
+	    Camera feed will go here!
+	</video>
+    <canvas id="canvas" width="256" height="256"></canvas>
+    <div id="streamControl">
+        <button type="button" class="btn btn-secondary" onclick="getMedia()">Get video stream</button>
+        <button type="button" class="btn btn-secondary" onclick="stopMedia()">Stop video stream</button>
+    </div>
+    <button id="button">I wanna feel you move</button>
+    <h1 id="infoheader"></h1>
+    <h1 id="geoheading">Nothing yet</h1>
+    <h1 id="absheading">Nothing yet</h1>
+</body>
+</html>

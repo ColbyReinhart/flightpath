@@ -1,0 +1,147 @@
+{
+    "Kent State University": {
+        "adjacency": [
+            [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
+            [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0],
+            [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+            [1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0],
+            [0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0],
+            [0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+            [0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]
+        ],
+        "nodes": [
+            {
+                "isLeaf": true,
+                "lat": 41.15031068379979,
+                "lng": -81.34664742423534,
+                "nodeName": "Hacking Space"
+            },
+            {
+                "isLeaf": true,
+                "lat": 41.14956425795552,
+                "lng": -81.34556218806631,
+                "nodeName": "Stojo"
+            },
+            {
+                "isLeaf": false,
+                "lat": 41.14897437750336,
+                "lng": -81.34653386033897,
+                "nodeName": "Between esplanade and stopher"
+            },
+            {
+                "isLeaf": true,
+                "lat": 41.148884538476615,
+                "lng": -81.34687517508716,
+                "nodeName": "Bowman"
+            },
+            {
+                "isLeaf": false,
+                "lat": 41.14978896515958,
+                "lng": -81.34666819267326,
+                "nodeName": "DI Hub"
+            },
+            {
+                "isLeaf": false,
+                "lat": 41.14993267099295,
+                "lng": -81.34782927402776,
+                "nodeName": "CVA"
+            },
+            {
+                "isLeaf": false,
+                "lat": 41.148499181832555,
+                "lng": -81.3456013002195,
+                "nodeName": "Olson Hall"
+            },
+            {
+                "isLeaf": true,
+                "lat": 41.148435245832246,
+                "lng": -81.34436422417663,
+                "nodeName": "Lake Hall"
+            },
+            {
+                "isLeaf": false,
+                "lat": 41.14775239104536,
+                "lng": -81.34444865291,
+                "nodeName": "MACC"
+            },
+            {
+                "isLeaf": false,
+                "lat": 41.146978097598726,
+                "lng": -81.34247962513474,
+                "nodeName": "The K"
+            },
+            {
+                "isLeaf": true,
+                "lat": 41.14698219121265,
+                "lng": -81.34252984441962,
+                "nodeName": "The Library"
+            }
+        ]
+    },
+    "Uncategorized": [
+        {
+            "isLeaf": true,
+            "lat": 41.14698219121265,
+            "lng": -81.34252984441962,
+            "nodeName": "Library"
+        },
+        {
+            "isLeaf": true,
+            "lat": 41.146978097598726,
+            "lng": -81.34247962513474,
+            "nodeName": "The K"
+        },
+        {
+            "isLeaf": true,
+            "lat": 41.14775239104536,
+            "lng": -81.34444865291,
+            "nodeName": "The MACC"
+        },
+        {
+            "isLeaf": true,
+            "lat": 41.148435245832246,
+            "lng": -81.34436422417663,
+            "nodeName": "Lake"
+        },
+        {
+            "isLeaf": true,
+            "lat": 41.148499181832555,
+            "lng": -81.3456013002195,
+            "nodeName": "Olson"
+        },
+        {
+            "isLeaf": true,
+            "lat": 41.14897437750336,
+            "lng": -81.34653386033897,
+            "nodeName": "Between bowman and stopher"
+        },
+        {
+            "isLeaf": true,
+            "lat": 41.148884538476615,
+            "lng": -81.34687517508716,
+            "nodeName": "Bowman"
+        },
+        {
+            "isLeaf": true,
+            "lat": 41.14993267099295,
+            "lng": -81.34782927402776,
+            "nodeName": "CVA"
+        },
+        {
+            "isLeaf": true,
+            "lat": 41.14978896515958,
+            "lng": -81.34666819267326,
+            "nodeName": "DI Hub"
+        },
+        {
+            "isLeaf": true,
+            "lat": 41.14956425795552,
+            "lng": -81.34556218806631,
+            "nodeName": "Stopher"
+        }
+    ]
+}

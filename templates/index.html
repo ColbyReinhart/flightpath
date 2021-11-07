@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" translate="yes">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Flightpath</title>
+    <link rel="stylesheet" href="/static/css/styles.css" type="text/css">
+    <script defer src="/static/js/index.js"></script>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div id="header" class="m-3 p-3 bg-light rounded">
+        <h1>Flightpath</h1>
+        <p>Light your path</p>
+    </div>
+
+    <br>
+
+    <div id="desktopLanding" class="hide">
+        <p>
+            Welcome to Flightpath! Visit our website on your mobile device of choice to experience navigation made easy.
+        </p>
+    </div>
+
+    <div id="setup">
+        <form action="navigation" method="get">
+            <div id="part1" class="hide">
+                <label for="location">Select your location or scan a Flightpath QR code to get started</label>
+                <select id="selectLoc" name="loc" class="form-select"></select>
+                <div class="d-grid gap-2">
+                    <button type="button" class="btn btn-secondary" onclick="buildDest()">Submit</button>
+                </div>
+            </div>
+
+            <div id="part2" class="hide">
+                <label for="location">Next, select your destination</label>
+                <select id="selectDest" name="dest" class="form-select"></select>
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-secondary">Show me the way</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
