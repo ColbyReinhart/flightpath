@@ -80,13 +80,23 @@ let updateFailure = (err) => {
 let draw = () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+	/*ctx.beginPath();
+    ctx.fillStyle = "#00ff00";
+    ctx.arc((canvas.width/2)+(canvas.width/2)*Math.cos(compass.getLocationAngle()), (canvas.height/2)+(canvas.height/2)*Math.sin(compass.getLocationAngle()), 16, 0, 2*Math.PI);
+    ctx.fill();
+    ctx.closePath();*/
+
+	console.log(compass.getLocationAngle());
+
     drawTarget(canvas, compass, fov);
 
     window.requestAnimationFrame(draw);
 }
 
 let updateGraphPosition = (position) => {
-	if (dist(position.coords.longitude, nodeList[path[0]].lng, position.coords.latitude, nodeList[path[0]].lat) < 0.00009909909) { // 0.00009909909
+	document.getElementById("guideText").innerHTML = "Now navigating to: " + nodeList[path[0]].nodeName;
+
+	if (dist(position.coords.longitude, nodeList[path[0]].lng, position.coords.latitude, nodeList[path[0]].lat) < 0.00019909909) { // 0.00009909909
 		path.shift();
 		if (path.length > 0) {
 			compass.setDestination(nodeList[path[0]].lat, nodeList[path[0]].lng);
@@ -228,9 +238,9 @@ async function getMedia() {
 		video.play();
 	};
 
-	compass = new Compass(10);
+	/*compass = new Compass(10);
 	compass.init();
-	compass.setDestination(nodeList[path[0]].lat, nodeList[path[0]].lng);
+	compass.setDestination(nodeList[path[0]].lat, nodeList[path[0]].lng);*/
 
 	draw();
 }
@@ -272,6 +282,9 @@ async function startProcess() {
 const streamButton = document.getElementById("streamButton");
 streamButton.addEventListener("click", () => {
 	getMedia();
+	compass = new Compass(10);
+	compass.init();
+	compass.setDestination(nodeList[path[0]].lat, nodeList[path[0]].lng);
 	geolocationWatchID = navigator.geolocation.watchPosition(updateGraphPosition, updateFailure, {
 		enableHighAccuracy: true,
 		timeout: 5000,
